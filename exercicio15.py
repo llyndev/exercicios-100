@@ -6,4 +6,19 @@
 
 metros = int(input("Informe o tamanho em metros quadrados: "))
 
-valor = 80
+litros = metros / 3
+
+valor = 80.0
+latas = 18
+
+qtd_latas = int(litros / latas)
+
+if (qtd_latas % 3 != 0):
+    qtd_latas += 1
+    
+preco = qtd_latas * valor
+
+if (qtd_latas <= 1):
+    print(f"O valor a ser pago R$ 80.00\nVocê vai precisar de apenas 1 lata de 18L")
+else:
+    print(f"O valor a ser pago R$ {preco:.2f}\nVocê vai precisar de {qtd_latas} latas de 18L")
